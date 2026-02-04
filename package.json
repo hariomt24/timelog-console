@@ -1,0 +1,33 @@
+{
+  "name": "timelog-console",
+  "version": "1.0.3",
+  "description": "Safely prepends human-readable timestamps to console methods for production Node.js applications",
+  "main": "index.js",
+  "keywords": [
+    "console",
+    "timestamp",
+    "logging",
+    "pm2",
+    "docker",
+    "kubernetes",
+    "production"
+  ],
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "Hariom Tiwari <heyhariom24@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hariomt24/timelog-console.git"
+  },
+  "homepage": "https://github.com/hariomt24/timelog-console#readme",
+  "bugs": {
+    "url": "https://github.com/hariomt24/timelog-console/issues"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
