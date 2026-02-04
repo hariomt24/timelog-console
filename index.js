@@ -164,7 +164,6 @@ function init() {
     const methodName = METHODS_TO_PATCH[i];
     
     try {
-      // Get the original method
       const originalMethod = console[methodName];
       
       // Skip if method doesn't exist or isn't a function
@@ -177,13 +176,9 @@ function init() {
       // but useful for debugging and potential future use)
       originalMethods[methodName] = originalMethod;
       
-      // Apply the timestamped wrapper
       console[methodName] = createTimestampedMethod(originalMethod);
       
     } catch (e) {
-      // Fail silently - do not break the application
-      // In production, a failed timestamp patch should never crash the app
-      // The original console method remains functional
     }
   }
   
@@ -202,11 +197,9 @@ function init() {
       console[methodName] = createIsolatedTimestampedMethod(originalMethod, methodName);
       
     } catch (e) {
-      // Fail silently
     }
   }
   
-  // Mark as initialized to prevent future double-patching
   initialized = true;
 }
 
@@ -217,5 +210,4 @@ init();
 
 // Export init function for explicit usage pattern
 // Allows: const init = require('timelog-console'); init();
-// Since init is idempotent, calling it again is safe and has no effect.
 module.exports = init;
