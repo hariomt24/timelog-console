@@ -1,6 +1,6 @@
 {
   "name": "timelog-console",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Safely prepends human-readable timestamps to console methods for production Node.js applications",
   "main": "index.js",
   "keywords": [
